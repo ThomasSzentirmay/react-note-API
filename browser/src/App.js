@@ -17,7 +17,7 @@ function App() {
   const [state, setState] = useState({
     user: null,
     notes: [],
-    loading: false
+    loading: true
   });
 
   useEffect(() => {
@@ -25,7 +25,8 @@ function App() {
       .then(res => {
         setState({
           ...state,
-          user: res.data.user
+          user: res.data.user,
+          loading: false
         });
       });
   }, []);
