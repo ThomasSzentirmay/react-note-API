@@ -9,6 +9,7 @@ html,
 body,
 #root {
   height: 100%;
+  background: rgb(88, 114, 124);
 }
 
 body {
@@ -59,6 +60,7 @@ body {
 
 header {
   background: #777;
+  height: 50px;
   padding: 6px 3%;
   color: #fff;
   margin-bottom: 35px;
@@ -94,6 +96,12 @@ main {
 form {
   width: 400px;
   margin: 20px auto 0;
+  &.dashboard-form {
+    margin-bottom: 25px;
+    h2 {
+      margin-bottom: 15px;
+    }
+  }
   p.error-message {
     text-align: center;
     margin-bottom: 10px;
