@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Oswald:wght@300;700&family=Roboto:wght@100;300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +9,6 @@ html,
 body,
 #root {
   height: 100%;
-  background: #7e94ad;
 }
 
 body {
@@ -59,7 +60,6 @@ body {
 header {
   background: #777;
   padding: 6px 3%;
-  height: 50px;
   color: #fff;
   margin-bottom: 35px;
   nav {
@@ -67,15 +67,17 @@ header {
       margin-right: 15px;
     }
     a {
-      color: #fff;
-      text-decoration: none;
-      &:not(:last-child) {
-        margin-right: 5px;
+        color: #fff;
+        text-decoration: none;
+    
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+    
+        &.active {
+          text-decoration: underline;
+        }
       }
-      &.active {
-        text-decoration: underline;
-      }
-    }
   }
 }
 
@@ -95,7 +97,7 @@ form {
   p.error-message {
     text-align: center;
     margin-bottom: 10px;
-    color: #e04444;
+    color: red;
   }
   input, button {
     padding: 5px 10px;
@@ -107,5 +109,18 @@ form {
     font-size: .98rem;
     background: #1ddd85;
     color: #fff;
+  }
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  .note {
+    padding: 10px;
+    border: 1px solid #333;
+    p {
+      margin: 4px 0;
+    }
   }
 }
