@@ -17,11 +17,11 @@ function Dashboard(props) {
     const handleSubmit = async e => {
         e.preventDefault();
 
-        const user = await axios.post('/api/note', formData);
+        const res = await axios.post('/api/note', formData);
 
         props.setState(oldState => ({
             ...oldState,
-            user
+            user: res.data.user
         }));
 
         setFormData({
