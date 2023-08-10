@@ -48,11 +48,11 @@ function App() {
 
         <Route path="/dashboard" element={(
           <Redirect user={state.user}>
-            <Dashboard state={state} setState={setState}/>
+            <Dashboard state={state} setState={setState} />
           </Redirect>
         )} />
 
-        <Route path='*' element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
